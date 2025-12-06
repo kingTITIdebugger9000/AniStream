@@ -25,7 +25,7 @@ const MainLayout = ({ title, data, label, endpoint }) => {
     if (hoverDetails[id]) return;
     try {
       setLoadingId(id);
-      const res = await fetch(`<YOURHOSTED.vercel.app/api/anime/${id}`);
+      const res = await fetch(`https://titianime.vercel.app/api/anime/${id}`);
       const json = await res.json();
       if (json.success && json.data) {
         setHoverDetails((prev) => ({ ...prev, [id]: json.data }));
