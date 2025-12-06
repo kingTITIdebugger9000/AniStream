@@ -33,7 +33,7 @@ const WatchPage = () => {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const res = await fetch(`<YOURHOSTED.vercel.app/api/anime/${id}`);
+        const res = await fetch(`https://titianime.vercel.app/api/episode/${id}`);
         const json = await res.json();
         if (json.success) setAnimeDetails(json.data);
       } catch (err) {
